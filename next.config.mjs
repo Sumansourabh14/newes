@@ -16,6 +16,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.news18.com",
       },
+      {
+        protocol: "https",
+        hostname: "c.ndtvimg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.wionews.com",
+      },
     ],
   },
 };
