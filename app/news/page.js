@@ -1,6 +1,5 @@
 import ArticleItem from "@/components/ArticleItem";
 import { TOP_HEADLINES_URL } from "@/config/config";
-import Image from "next/image";
 
 async function getData() {
   const res = await fetch(TOP_HEADLINES_URL);

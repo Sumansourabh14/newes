@@ -1,6 +1,11 @@
 import ArticleItem from "@/components/ArticleItem";
 import { CATEGORY_URL } from "@/config/config";
 
+export const metadata = {
+  title: "Top Headlines | Newes",
+  description: "A Next.js 14 project",
+};
+
 async function getData(params) {
   const res = await fetch(CATEGORY_URL + params);
 
