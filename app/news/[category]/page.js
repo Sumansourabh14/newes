@@ -1,23 +1,20 @@
 import ArticleItem from "@/components/ArticleItem";
-import { TOP_HEADLINES_URL } from "@/config/config";
-import Image from "next/image";
+import { CATEGORY_URL } from "@/config/config";
 
-async function getData() {
-  const res = await fetch(TOP_HEADLINES_URL);
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch news data");
-  }
+async function getData(params) {
+  const res = await fetch(CATEGORY_URL + params);
 
   return res.json();
 }
 
-export default async function Page() {
-  const data = await getData();
+export default async function Page({ params }) {
+  console.log(params);
+
+  const data = await getData(params.category);
 
   const articles = data.articles.slice(0, 6);
 
-  console.log(articles);
+  console.log(`data------>`, articles);
 
   return (
     <main className="h-screen">
