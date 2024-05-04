@@ -20,7 +20,7 @@ export default async function Page() {
 
   return (
     <main className="h-screen">
-      <div className="grid grid-cols-3 h-full gap-1">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  h-full gap-1">
         {articles.map((article) => (
           <div key={article.title} className="relative cursor-pointer">
             <div className="h-full">
